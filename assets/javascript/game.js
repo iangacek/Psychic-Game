@@ -18,9 +18,10 @@ document.onkeydown = function (event) {
     if (playerLetter === cpuChoice) {
         wins++;
         alert("You've done it!");
+        $("#wins").append(wins);
     } else if (playerLetter !== cpuChoice) {
         guessesRemaining--;
-
+        $("#losses").append(losses);
         $("#guesses").append(playerLetter + " ");
     }
     
