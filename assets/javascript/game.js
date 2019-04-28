@@ -11,21 +11,23 @@ var cpuChoice = letters[Math.floor(Math.random() * 2)];
 console.log(cpuChoice);
 
 // Captures user letter input
-document.onkeydown = function(event) {
+document.onkeydown = function (event) {
     var playerLetter = event.key;
     console.log(playerLetter);
+
+    if (playerLetter === cpuChoice) {
+        wins++;
+        alert("You've done it!");
+    } else if (playerLetter !== cpuChoice) {
+        guessesRemaining--;
+        $("#guesses").append(playerLetter);
+        // '#guesses'.append(playerLetter);
+    }
+
+    if (guessesRemaining === 0) {
+        losses++;
+        alert("You lose!");
+    }
 }
 
 // I have no idea why this isn't working. It should work... I think?
-if (playerLetter === cpuChoice) {
-    wins++;
-    alert("You've done it!");
-} else if (playerLetter !== cpuChoice) {
-    guessesRemaining--;
-    '#guesses'.append(playerLetter);
-}
-
-if (guessesRemaining === 0) {
-    losses++;
-    alert("You lose!");
-}
