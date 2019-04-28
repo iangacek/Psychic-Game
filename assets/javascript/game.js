@@ -20,13 +20,14 @@ document.onkeydown = function (event) {
         alert("You've done it!");
     } else if (playerLetter !== cpuChoice) {
         guessesRemaining--;
+
         $("#guesses").append(playerLetter + " ");
     }
     
     // This *SHOULD* reset the game...
     function reset() {
-        var guessesRemaining = 10;
-        var guesses = "";
+        guessesRemaining = 10;
+        guesses = "";
     }
 
     if (guessesRemaining === 0) {
