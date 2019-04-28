@@ -23,11 +23,18 @@ document.onkeydown = function (event) {
         $("#guesses").append(playerLetter);
         // '#guesses'.append(playerLetter);
     }
-
+    
+    function reset() {
+        guessesRemaining = 10;
+        guesses = "";
+    }
+    
     if (guessesRemaining === 0) {
         losses++;
         alert("You lose!");
+        reset();
     }
+
 }
 
 // I have no idea why this isn't working. It should work... I think?
