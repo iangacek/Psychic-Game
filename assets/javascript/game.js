@@ -6,7 +6,7 @@ var guesses = "";
 var playerLetter = "";
 
 // Calculating random number
-var cpuChoice = letters[Math.floor(Math.random() * 2)];
+var cpuChoice = letters[Math.floor(Math.random() * 26)];
 // Confirms letter is picked correctly
 console.log(cpuChoice);
 
