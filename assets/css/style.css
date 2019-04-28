@@ -1,0 +1,14 @@
+body {
+    background: black;
+    color: white;
+    float: left;
+}
+
+footer {
+    margin-left: 32px;
+    font-size: 8px;
+}
+
+#smallText {
+    font-size: 8px;
+}
